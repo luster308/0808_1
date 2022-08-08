@@ -1,15 +1,15 @@
 
 public class Salary {
-	private String[] salaryNum;
+	private String salaryNum;
 	private int basicMoney;
 	private int nightClock;
 	private int familyNum;
 	public Salary() {}
 	
-	public String[] getSalaryNum() {
+	public String getSalaryNum() {
 		return salaryNum;
 	}
-	public void setSalaryNum(String[] salaryNum) {
+	public void setSalaryNum(String salaryNum) {
 		this.salaryNum = salaryNum;
 	}
 	public int getBasicMoney() {

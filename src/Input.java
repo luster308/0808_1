@@ -10,12 +10,9 @@ public class Input {
 	}
 
 	public void input() {
-		String[] salaryNum = new String[3];
 		for (int i = 0; i < array.length; i++) {
 			System.out.print("사원번호 :");
-			salaryNum[0] = this.sc.nextLine();
-			salaryNum[1] = this.sc.nextLine();
-			salaryNum[2] = this.sc.nextLine();
+			String salaryNum = this.sc.nextLine();
 			System.out.print("기본급 :");
 			int basicMoney = this.sc.nextInt();
 			System.out.print("야간시간 :");
