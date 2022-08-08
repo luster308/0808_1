@@ -15,7 +15,14 @@ public class Calc {
 			int hoMoney = this.hoMoney(salary.hoCode(salary.getSalaryNum()));
 			int faMoney = this.faMoney(salary.getFamilyNum());
 			int nightMoney = this.niMoney(salary.getNightClock());
-			System.out.println(nightMoney);
+			int totMoney = this.totMoney(hoMoney, basicNum(salary.getBasicMoney()), nightMoney, faMoney);
+			double realMoney = this.realMoney(totMoney, hoMoney);
+			
+			
+			
+//			System.out.printf("%d %d %d %d %d", hoMoney,faMoney,nightMoney,totMoney,(int)realMoney);
+			
+			
 			
 		}
 			
@@ -51,7 +58,7 @@ public class Calc {
 		case 3: nimoney = 3500;num = nimoney; break;  
 		case 4: nimoney = 4500;num = nimoney; break;  
 		}
-		return nimoney;
+		return num;
 	}
 	private int totMoney(int homoney, int basicmoney, int nimoney, int famoney) {
 		return homoney + basicmoney + nimoney + famoney;
@@ -73,4 +80,16 @@ public class Calc {
 		}
 		return "0";
 	}
+	
+	private int basicNum(int bnum) {
+		int num = 0;
+		switch (bnum) {
+		case 1: num = 15000; break;
+		case 2: num = 25000; break;
+		case 3: num = 35000; break;
+		case 4: num = 45000; break;
+		}
+		return num;
+	}
 }
+
