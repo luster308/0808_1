@@ -20,7 +20,9 @@ public class Input {
 			System.out.print("가족수 :");
 			int familyNum = this.sc.nextInt();
 			this.sc.nextLine();
+			
+			this.array[i] = new Salary(salaryNum,basicMoney,nightClock,familyNum);
 		}
-		System.out.println(array[0].getSalaryNum());
+//		System.out.println(array[0].getSalaryNum());
 	}
 }

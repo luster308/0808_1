@@ -6,8 +6,7 @@ public class Main {
 		Input input = new Input(array);
 		input.input();
 		
-//		Calc calc = new Calc(array);
-//		calc.calc();
+		Calc calc = new Calc(array);
+		calc.calc();
 	}
-	
 }

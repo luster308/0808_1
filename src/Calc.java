@@ -7,16 +7,14 @@ public class Calc {
 	}
 	
 	public void calc() {
+		Salary salary = this.array[3];
 		for (int i = 0; i < array.length; i++) {
-			char[] ch = new char[2];
-			Salary salay = this.array[i];
-			for (int j = 0; j < 2; j++) {
-				ch[j] = salay.getSalaryNum().charAt(j);
-				System.out.println(ch[j]);
-			}
 			
-			
+			String buName = this.buName(salary.hoCode(salary.getSalaryNum()));
+			System.out.println(buName);
 		}
+			
+		
 	}
 	
 	private int hoMoney(char ch) {
@@ -51,6 +49,27 @@ public class Calc {
 		return homoney + basicmoney + nimoney + famoney;
 	}
 	private double realMoney(int totmoney, int homoney) {
+
 		return totmoney - (homoney*0.1);
+	}
+//	private char nameCode(String salaryNum) {
+//		char ch = salaryNum.charAt(0);
+//		return ch;
+//	}
+//	private char hoCode(String salaryNum) {
+//		char ch = salaryNum.charAt(1);
+//		return ch;
+//	}
+	private String buName(char ch) {
+		switch (ch) {
+		case 'A': return "영업부";
+		case 'B': return "업무부";
+		case 'C': return "홍보부";
+		case 'D': return "인사부";
+		case 'E': return "경리부";
+		case 'F': return "판촉부";
+		case 'G': return "총무부";
+		}
+		return "0";
 	}
 }

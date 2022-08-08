@@ -4,8 +4,18 @@ public class Salary {
 	private int basicMoney;
 	private int nightClock;
 	private int familyNum;
+	private char nameCode;
+	private char hoCode;
+	
 	public Salary() {}
 	
+	public Salary(String salaryNum, int basicMoney, int nightClock, int familyNum) {
+		this.salaryNum = salaryNum;
+		this.basicMoney = basicMoney;
+		this.nightClock = nightClock;
+		this.familyNum = familyNum;
+	}
+
 	public String getSalaryNum() {
 		return salaryNum;
 	}
@@ -31,5 +41,13 @@ public class Salary {
 		this.familyNum = familyNum;
 	}
 	
+	public char nameCode(String salaryNum) {
+		char ch = salaryNum.charAt(0);
+		return ch;
+	}
+	public char hoCode(String salaryNum) {
+		char ch = salaryNum.charAt(1);
+		return ch;
+	}
 	
 }
