@@ -7,7 +7,7 @@ public class Salary {
 	private char nameCode;
 	private char hoCode;
 	
-	public Salary() {}
+//	public Salary() {}
 	
 	public Salary(String salaryNum, int basicMoney, int nightClock, int familyNum) {
 		this.salaryNum = salaryNum;

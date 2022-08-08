@@ -7,11 +7,16 @@ public class Calc {
 	}
 	
 	public void calc() {
-		Salary salary = this.array[3];
+//		Salary salary = this.array[3];
 		for (int i = 0; i < array.length; i++) {
+			Salary salary = this.array[i];
 			
-			String buName = this.buName(salary.hoCode(salary.getSalaryNum()));
-			System.out.println(buName);
+			String buName = this.buName(salary.nameCode(salary.getSalaryNum()));
+			int hoMoney = this.hoMoney(salary.hoCode(salary.getSalaryNum()));
+			int faMoney = this.faMoney(salary.getFamilyNum());
+			int nightMoney = this.niMoney(salary.getNightClock());
+			System.out.println(nightMoney);
+			
 		}
 			
 		
@@ -19,16 +24,18 @@ public class Calc {
 	
 	private int hoMoney(char ch) {
 		int[] homoney = new int[7];
+		int num = 0;
+//		System.out.println(ch);
 		switch (ch) {
-		case 1: homoney[0] = 900000;return homoney[0]; 
-		case 2: homoney[1] = 400000;return homoney[1]; 
-		case 3: homoney[2] = 600000;return homoney[2]; 
-		case 4: homoney[3] = 800000;return homoney[3]; 
-		case 5: homoney[4] = 300000;return homoney[4]; 
-		case 6: homoney[5] = 800000;return homoney[5]; 
-		case 7: homoney[6] = 800000;return homoney[6]; 
+		case '1': homoney[0] = 900000; num = homoney[0];break; 
+		case '2': homoney[1] = 400000; num = homoney[1];break; 
+		case '3': homoney[2] = 600000; num = homoney[2];break; 
+		case '4': homoney[3] = 800000; num = homoney[3];break; 
+		case '5': homoney[4] = 300000; num = homoney[4];break; 
+		case '6': homoney[5] = 800000; num = homoney[5];break; 
+		case '7': homoney[6] = 800000; num = homoney[6];break; 
 		}     
-		return 0;
+		return num;
 	}                                  
 	private int faMoney(int init) {
 		int famoney = 0;
@@ -37,13 +44,14 @@ public class Calc {
 	}
 	private int niMoney(int init) {
 		int nimoney = 0;
+		int num = 0;
 		switch (init) {
-		case 1: return nimoney =1500;  
-		case 2: return nimoney =2500;  
-		case 3: return nimoney =3500;  
-		case 4: return nimoney =4500;  
+		case 1: nimoney = 1500;num = nimoney; break; 
+		case 2: nimoney = 2500;num = nimoney; break;  
+		case 3: nimoney = 3500;num = nimoney; break;  
+		case 4: nimoney = 4500;num = nimoney; break;  
 		}
-		return 0;
+		return nimoney;
 	}
 	private int totMoney(int homoney, int basicmoney, int nimoney, int famoney) {
 		return homoney + basicmoney + nimoney + famoney;
@@ -52,14 +60,7 @@ public class Calc {
 
 		return totmoney - (homoney*0.1);
 	}
-//	private char nameCode(String salaryNum) {
-//		char ch = salaryNum.charAt(0);
-//		return ch;
-//	}
-//	private char hoCode(String salaryNum) {
-//		char ch = salaryNum.charAt(1);
-//		return ch;
-//	}
+
 	private String buName(char ch) {
 		switch (ch) {
 		case 'A': return "영업부";
