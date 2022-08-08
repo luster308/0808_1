@@ -8,5 +8,8 @@ public class Main {
 		
 		Calc calc = new Calc(array);
 		calc.calc();
+		
+		Output output = new Output(array);
+		output.output();
 	}
 }

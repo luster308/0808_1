@@ -18,6 +18,7 @@ public class Calc {
 			int totMoney = this.totMoney(hoMoney, basicNum(salary.getBasicMoney()), nightMoney, faMoney);
 			double realMoney = this.realMoney(totMoney, hoMoney);
 			
+			salary.setBuname(buName);
 			salary.setFiHoMoney(hoMoney);
 			salary.setFiFaMoney(faMoney);
 			salary.setFaNightMoney(nightMoney);

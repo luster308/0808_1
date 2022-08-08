@@ -6,7 +6,15 @@ public class Salary {
 	private int familyNum;
 	private char nameCode;
 	private char hoCode;
+	private String buname;
 	
+	public String getBuname() {
+		return buname;
+	}
+
+	public void setBuname(String buname) {
+		this.buname = buname;
+	}
 	private int fiHoMoney;
 	private int fiFaMoney;
 	private int faNightMoney;
