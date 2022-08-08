@@ -21,5 +21,6 @@ public class Input {
 			int familyNum = this.sc.nextInt();
 			this.sc.nextLine();
 		}
+		System.out.println(array[0].getSalaryNum());
 	}
 }
